@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(target)
+aux_source_directory(src SOURCES)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(target ${SOURCES})
+target_link_libraries(target -pthread)
